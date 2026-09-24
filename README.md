@@ -28,18 +28,18 @@
 
 #### 專案
 
-**[AI 選品輔助系統（後端）](https://github.com/chen-weishan/ai-products-selection-backend)**｜五人團隊，我負責評分引擎與情境權重
+[**AI 選品輔助系統（後端）**](https://github.com/chen-weishan/ai-products-selection-backend)｜五人團隊，我負責評分引擎與情境權重<br>
 Spring Boot · PostgreSQL · Flyway
 - 模型只能從四組具名權重擇一，不能自己填數值。連續數值沒辦法人工審核，也重現不了。
 - 共用資料庫出過一次全組起不來的事故。之後我把日常連線改成最小權限角色，並用 Testcontainers 從 V1 重建驗證。
 - 排行頁的讀取改用 JdbcClient 手寫 SQL，避開 JPA 的 N+1。寫入仍走 JPA。
 
-**[dynamic-survey](https://github.com/chen-weishan/dynamic-survey)**｜個人專案｜[Demo 影片](https://youtu.be/Ehe9MjT852c)
+[**dynamic-survey**](https://github.com/chen-weishan/dynamic-survey)｜個人專案｜[Demo 影片](https://youtu.be/Ehe9MjT852c)<br>
 Spring Boot · Angular 19 · Tailwind CSS · MySQL
 - JWT 驗證沒用現成 starter，JwtUtil、JwtAuthFilter、SecurityConfig 自己寫。
 - GlobalExceptionHandler 搭自訂 BizException，把回應格式跟錯誤碼收成一份契約。
 
-**[Expense-Splitter](https://github.com/chen-weishan/Expense-Splitter)**｜個人專案
+[**Expense-Splitter**](https://github.com/chen-weishan/Expense-Splitter)｜個人專案<br>
 純 Java，無框架
 - 金額全程 BigDecimal。除不盡的那一分錢由 RemainderStrategy 決定歸屬，新增規則不用動計算流程。
 - 零和稽核：所有人的餘額加總恆為零，不成立就擋下來。
