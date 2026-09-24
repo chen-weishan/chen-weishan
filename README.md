@@ -2,7 +2,7 @@
 
 **Java 後端工程師**｜Spring Boot · Spring Security · Angular 19 · PostgreSQL / MySQL
 
-我寫 Spring Boot 後端，也用 Angular 串自己的 API。下面三個專案都是公開 repo，程式碼跟 commit 紀錄可以直接看。
+我寫 Spring Boot 後端，也用 Angular 串自己的 API。下面三個專案都是公開 repo，可以直接看程式碼跟 commit 紀錄。
 2026/10/15 職訓結訓，10/16 起可全職到職。
 
 ---
@@ -32,11 +32,11 @@
 Spring Boot · PostgreSQL · Flyway
 - 模型只能從四組具名權重擇一，不能自己填數值。連續數值沒辦法人工審核，也重現不了。
 - 共用資料庫出過一次全組起不來的事故。之後我把日常連線改成最小權限角色，並用 Testcontainers 從 V1 重建驗證。
-- 排行頁的讀取改用 JdbcClient 手寫 SQL，避開 JPA 的 N+1。寫入仍走 JPA。
+- 我把排行頁的讀取改用 JdbcClient 手寫 SQL，避開 JPA 的 N+1。寫入仍走 JPA。
 
 [**dynamic-survey**](https://github.com/chen-weishan/dynamic-survey)｜個人專案｜[Demo 影片](https://youtu.be/Ehe9MjT852c)<br>
 Spring Boot · Angular 19 · Tailwind CSS · MySQL
-- JWT 驗證沒用現成 starter，JwtUtil、JwtAuthFilter、SecurityConfig 自己寫。
+- 我沒用現成的 starter，自己寫了 JwtUtil、JwtAuthFilter、SecurityConfig 來做 JWT 驗證。
 - GlobalExceptionHandler 搭自訂 BizException，把回應格式跟錯誤碼收成一份契約。
 
 [**Expense-Splitter**](https://github.com/chen-weishan/Expense-Splitter)｜個人專案<br>
@@ -48,7 +48,7 @@ Spring Boot · Angular 19 · Tailwind CSS · MySQL
 
 - 讀跟寫可以用不同工具，看查詢長什麼樣子再選。
 - 出過事故的地方，我會把規則寫成文件。下一個接手的人只能靠文件，沒辦法靠問我。
-- 用 AI 協作時，哪些事它不能決定由我先定好。
+- 用 AI 協作時，我會先定好哪些事它不能決定。
 
 #### 聯絡
 
